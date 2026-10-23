@@ -117,10 +117,11 @@ function Get-DirNames([string]$Path) {
     @(Get-ChildItem -LiteralPath $Path -Directory | ForEach-Object Name | Sort-Object)
 }
 
-function Test-Fixture([string]$Name, [scriptblock]$Body) {
-    Test-Case $Name {
+function Test-Fixture([string]$FixtureName, [scriptblock]$FixtureBody) {
+    # Test-Case の引数 $Body と名前が重なると、動的スコープで自分自身を呼び続けるため別名にします。
+    Test-Case $FixtureName {
         $fixture = New-Fixture
-        try { & $Body $fixture }
+        try { & $FixtureBody $fixture }
         finally { Remove-Item -LiteralPath $fixture.Root -Recurse -Force -ErrorAction SilentlyContinue }
     }
 }
