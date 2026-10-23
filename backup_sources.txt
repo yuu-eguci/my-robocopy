@@ -1,0 +1,8 @@
+# バックアップ対象を 1 行に 1 件、「名前|コピー元パス」の形式で書いてください。
+# 名前はバックアップフォルダ内のフォルダ名とログファイル名になります。
+Desktop|C:\Users\username!!\Desktop
+Dropbox|C:\Users\username!!\Dropbox
+Downloads|C:\Users\username!!\Downloads
+Documents|C:\Users\username!!\Documents
+xampp|C:\xampp
+Music|C:\Users\Public\Music\Sony MediaPlayerX\Shared\Music
