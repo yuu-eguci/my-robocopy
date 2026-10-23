@@ -1,0 +1,2 @@
+*.bat text eol=crlf
+backup_sources.txt text eol=crlf
